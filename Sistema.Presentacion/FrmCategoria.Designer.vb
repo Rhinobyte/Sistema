@@ -25,12 +25,17 @@ Partial Class FrmCategoria
         Me.components = New System.ComponentModel.Container()
         Me.TabGeneral = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.BtnDesactivar = New System.Windows.Forms.Button()
+        Me.BtnActivar = New System.Windows.Forms.Button()
+        Me.BtnEliminar = New System.Windows.Forms.Button()
+        Me.ChkSeleccionar = New System.Windows.Forms.CheckBox()
         Me.BtnBuscar = New System.Windows.Forms.Button()
         Me.TxtValor = New System.Windows.Forms.TextBox()
         Me.LblTotal = New System.Windows.Forms.Label()
         Me.DgvListado = New System.Windows.Forms.DataGridView()
         Me.Seleccionar = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.BtnActualizar = New System.Windows.Forms.Button()
         Me.TxtId = New System.Windows.Forms.TextBox()
         Me.TxtDescripcion = New System.Windows.Forms.TextBox()
         Me.TxtNombre = New System.Windows.Forms.TextBox()
@@ -39,11 +44,6 @@ Partial Class FrmCategoria
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.ErrorIcono = New System.Windows.Forms.ErrorProvider(Me.components)
-        Me.BtnActualizar = New System.Windows.Forms.Button()
-        Me.ChkSeleccionar = New System.Windows.Forms.CheckBox()
-        Me.BtnEliminar = New System.Windows.Forms.Button()
-        Me.BtnActivar = New System.Windows.Forms.Button()
-        Me.BtnDesactivar = New System.Windows.Forms.Button()
         Me.TabGeneral.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         CType(Me.DgvListado, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -78,6 +78,43 @@ Partial Class FrmCategoria
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Listado"
         Me.TabPage1.UseVisualStyleBackColor = True
+        '
+        'BtnDesactivar
+        '
+        Me.BtnDesactivar.Location = New System.Drawing.Point(272, 388)
+        Me.BtnDesactivar.Name = "BtnDesactivar"
+        Me.BtnDesactivar.Size = New System.Drawing.Size(75, 23)
+        Me.BtnDesactivar.TabIndex = 7
+        Me.BtnDesactivar.Text = "Desactivar"
+        Me.BtnDesactivar.UseVisualStyleBackColor = True
+        '
+        'BtnActivar
+        '
+        Me.BtnActivar.Location = New System.Drawing.Point(191, 388)
+        Me.BtnActivar.Name = "BtnActivar"
+        Me.BtnActivar.Size = New System.Drawing.Size(75, 23)
+        Me.BtnActivar.TabIndex = 6
+        Me.BtnActivar.Text = "Activar"
+        Me.BtnActivar.UseVisualStyleBackColor = True
+        '
+        'BtnEliminar
+        '
+        Me.BtnEliminar.Location = New System.Drawing.Point(110, 388)
+        Me.BtnEliminar.Name = "BtnEliminar"
+        Me.BtnEliminar.Size = New System.Drawing.Size(75, 23)
+        Me.BtnEliminar.TabIndex = 5
+        Me.BtnEliminar.Text = "Eliminar"
+        Me.BtnEliminar.UseVisualStyleBackColor = True
+        '
+        'ChkSeleccionar
+        '
+        Me.ChkSeleccionar.AutoSize = True
+        Me.ChkSeleccionar.Location = New System.Drawing.Point(23, 390)
+        Me.ChkSeleccionar.Name = "ChkSeleccionar"
+        Me.ChkSeleccionar.Size = New System.Drawing.Size(82, 17)
+        Me.ChkSeleccionar.TabIndex = 4
+        Me.ChkSeleccionar.Text = "Seleccionar"
+        Me.ChkSeleccionar.UseVisualStyleBackColor = True
         '
         'BtnBuscar
         '
@@ -142,6 +179,15 @@ Partial Class FrmCategoria
         Me.TabPage2.Text = "Mantenimiento"
         Me.TabPage2.UseVisualStyleBackColor = True
         '
+        'BtnActualizar
+        '
+        Me.BtnActualizar.Location = New System.Drawing.Point(97, 183)
+        Me.BtnActualizar.Name = "BtnActualizar"
+        Me.BtnActualizar.Size = New System.Drawing.Size(75, 23)
+        Me.BtnActualizar.TabIndex = 7
+        Me.BtnActualizar.Text = "Actualizar"
+        Me.BtnActualizar.UseVisualStyleBackColor = True
+        '
         'TxtId
         '
         Me.TxtId.Location = New System.Drawing.Point(290, 18)
@@ -204,52 +250,6 @@ Partial Class FrmCategoria
         'ErrorIcono
         '
         Me.ErrorIcono.ContainerControl = Me
-        '
-        'BtnActualizar
-        '
-        Me.BtnActualizar.Location = New System.Drawing.Point(97, 183)
-        Me.BtnActualizar.Name = "BtnActualizar"
-        Me.BtnActualizar.Size = New System.Drawing.Size(75, 23)
-        Me.BtnActualizar.TabIndex = 7
-        Me.BtnActualizar.Text = "Actualizar"
-        Me.BtnActualizar.UseVisualStyleBackColor = True
-        '
-        'ChkSeleccionar
-        '
-        Me.ChkSeleccionar.AutoSize = True
-        Me.ChkSeleccionar.Location = New System.Drawing.Point(23, 390)
-        Me.ChkSeleccionar.Name = "ChkSeleccionar"
-        Me.ChkSeleccionar.Size = New System.Drawing.Size(82, 17)
-        Me.ChkSeleccionar.TabIndex = 4
-        Me.ChkSeleccionar.Text = "Seleccionar"
-        Me.ChkSeleccionar.UseVisualStyleBackColor = True
-        '
-        'BtnEliminar
-        '
-        Me.BtnEliminar.Location = New System.Drawing.Point(110, 388)
-        Me.BtnEliminar.Name = "BtnEliminar"
-        Me.BtnEliminar.Size = New System.Drawing.Size(75, 23)
-        Me.BtnEliminar.TabIndex = 5
-        Me.BtnEliminar.Text = "Eliminar"
-        Me.BtnEliminar.UseVisualStyleBackColor = True
-        '
-        'BtnActivar
-        '
-        Me.BtnActivar.Location = New System.Drawing.Point(191, 388)
-        Me.BtnActivar.Name = "BtnActivar"
-        Me.BtnActivar.Size = New System.Drawing.Size(75, 23)
-        Me.BtnActivar.TabIndex = 6
-        Me.BtnActivar.Text = "Activar"
-        Me.BtnActivar.UseVisualStyleBackColor = True
-        '
-        'BtnDesactivar
-        '
-        Me.BtnDesactivar.Location = New System.Drawing.Point(272, 388)
-        Me.BtnDesactivar.Name = "BtnDesactivar"
-        Me.BtnDesactivar.Size = New System.Drawing.Size(75, 23)
-        Me.BtnDesactivar.TabIndex = 7
-        Me.BtnDesactivar.Text = "Desactivar"
-        Me.BtnDesactivar.UseVisualStyleBackColor = True
         '
         'FrmCategoria
         '

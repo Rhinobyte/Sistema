@@ -1,9 +1,9 @@
 ﻿Imports Sistema.Datos
 Imports Sistema.Entidades
-Public Class NCategoria
+Public Class NArticulo
     Public Function Listar() As DataTable
         Try
-            Dim Datos As New DCategoria
+            Dim Datos As New DArticulo
             Dim Tabla As New DataTable
             Tabla = Datos.Listar()
             Return Tabla
@@ -15,7 +15,7 @@ Public Class NCategoria
 
     Public Function Buscar(valor As String) As DataTable
         Try
-            Dim Datos As New DCategoria
+            Dim Datos As New DArticulo
             Dim Tabla As New DataTable
             Tabla = Datos.Buscar(valor)
             Return Tabla
@@ -24,21 +24,10 @@ Public Class NCategoria
             Return Nothing
         End Try
     End Function
-    Public Function Seleccionar() As DataTable
-        Try
-            Dim Datos As New DCategoria
-            Dim Tabla As New DataTable
-            Tabla = Datos.Seleccionar()
-            Return Tabla
-        Catch ex As Exception
-            MsgBox(ex.Message)
-            Return Nothing
-        End Try
-    End Function
 
-    Public Function Insertar(Obj As Categoria) As Boolean
+    Public Function Insertar(Obj As Articulo) As Boolean
         Try
-            Dim Datos As New DCategoria
+            Dim Datos As New DArticulo
             Datos.Insertar(Obj)
             Return True
         Catch ex As Exception
@@ -47,9 +36,9 @@ Public Class NCategoria
         End Try
     End Function
 
-    Public Function Actualizar(Obj As Categoria) As Boolean
+    Public Function Actualizar(Obj As Articulo) As Boolean
         Try
-            Dim Datos As New DCategoria
+            Dim Datos As New DArticulo
             Datos.Actualizar(Obj)
             Return True
         Catch ex As Exception
@@ -60,7 +49,7 @@ Public Class NCategoria
 
     Public Function Eliminar(Id As Integer) As Boolean
         Try
-            Dim Datos As New DCategoria
+            Dim Datos As New DArticulo
             Datos.Eliminar(Id)
             Return True
         Catch ex As Exception
@@ -71,7 +60,7 @@ Public Class NCategoria
 
     Public Function Desactivar(Id As Integer) As Boolean
         Try
-            Dim Datos As New DCategoria
+            Dim Datos As New DArticulo
             Datos.Desactivar(Id)
             Return True
         Catch ex As Exception
@@ -82,7 +71,7 @@ Public Class NCategoria
 
     Public Function Activar(Id As Integer) As Boolean
         Try
-            Dim Datos As New DCategoria
+            Dim Datos As New DArticulo
             Datos.Activar(Id)
             Return True
         Catch ex As Exception
