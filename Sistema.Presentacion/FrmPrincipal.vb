@@ -1,6 +1,10 @@
 ﻿Imports System.Windows.Forms
 
 Public Class FrmPrincipal
+    Private _IdUsuario As String
+    Private _IdRol As String
+    Private _Rol As String
+    Private _Nombre As String
 
     Private Sub ShowNewForm(ByVal sender As Object, ByVal e As EventArgs) Handles NewToolStripButton.Click, NewWindowToolStripMenuItem.Click
         ' Cree una nueva instancia del formulario secundario.
@@ -85,7 +89,71 @@ Public Class FrmPrincipal
 
     Private m_ChildFormNumber As Integer
 
+    Public Property IdUsuario As String
+        Get
+            Return _IdUsuario
+        End Get
+        Set(value As String)
+            _IdUsuario = value
+        End Set
+    End Property
+
+    Public Property IdRol As String
+        Get
+            Return _IdRol
+        End Get
+        Set(value As String)
+            _IdRol = value
+        End Set
+    End Property
+
+    Public Property Rol As String
+        Get
+            Return _Rol
+        End Get
+        Set(value As String)
+            _Rol = value
+        End Set
+    End Property
+
+    Public Property Nombre As String
+        Get
+            Return _Nombre
+        End Get
+        Set(value As String)
+            _Nombre = value
+        End Set
+    End Property
+
     Private Sub FrmPrincipal_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        TsBarraInferior.Text = "Desarrollado por Isaac Garcia, Usuario: " & Me.Nombre
+        MsgBox("Bienvenido " & Me.Nombre, vbOKOnly + vbInformation, "Bienvenido al sistema")
+        If (Me.Rol = "Administrador") Then
+            MnuAlmacen.Enabled = True
+            MnuIngresos.Enabled = True
+            MnuVentas.Enabled = True
+            MnuAcceso.Enabled = True
+            MnuConsultas.Enabled = True
+        ElseIf (Me.Rol = "Almacenero") Then
+            MnuAlmacen.Enabled = True
+            MnuIngresos.Enabled = True
+            MnuVentas.Enabled = False
+            MnuAcceso.Enabled = False
+            MnuConsultas.Enabled = False
+        ElseIf (Me.Rol = "Vendedor") Then
+            MnuAlmacen.Enabled = False
+            MnuIngresos.Enabled = False
+            MnuVentas.Enabled = True
+            MnuAcceso.Enabled = False
+            MnuConsultas.Enabled = False
+        Else
+            MnuAlmacen.Enabled = False
+            MnuIngresos.Enabled = False
+            MnuVentas.Enabled = False
+            MnuAcceso.Enabled = False
+            MnuConsultas.Enabled = False
+
+        End If
 
     End Sub
 
@@ -111,5 +179,15 @@ Public Class FrmPrincipal
         Dim frm As New FrmUsuario
         frm.MdiParent = Me
         frm.Show()
+    End Sub
+
+    Private Sub MnuSalir_Click(sender As Object, e As EventArgs) Handles MnuSalir.Click
+        If (MsgBox("¿Estas seguro de salir del sistema?", vbYesNo + vbQuestion, "Sistema") = vbYes) Then
+            End
+        End If
+    End Sub
+
+    Private Sub FrmPrincipal_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
+        End
     End Sub
 End Class

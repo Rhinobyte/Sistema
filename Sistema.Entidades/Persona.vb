@@ -1,30 +1,28 @@
-﻿Public Class Usuario
-    Private _IdUsuario As Integer
-    Private _IdRol As Integer
+﻿Public Class Persona
+    Private _IdPersona As Integer
+    Private _TipoPersona As String
     Private _Nombre As String
     Private _TipoDocumento As String
     Private _NumDocumento As String
     Private _Direccion As String
     Private _Telefono As String
     Private _Email As String
-    Private _Estado As Boolean
-    Private _Clave As String
-    Private _Rol As String
-    Public Property IdUsuario As Integer
+
+    Public Property IdPersona As Integer
         Get
-            Return _IdUsuario
+            Return _IdPersona
         End Get
         Set(value As Integer)
-            _IdUsuario = value
+            _IdPersona = value
         End Set
     End Property
 
-    Public Property IdRol As Integer
+    Public Property TipoPersona As String
         Get
-            Return _IdRol
+            Return _TipoPersona
         End Get
-        Set(value As Integer)
-            _IdRol = value
+        Set(value As String)
+            _TipoPersona = value
         End Set
     End Property
 
@@ -79,33 +77,6 @@
         End Get
         Set(value As String)
             _Email = value
-        End Set
-    End Property
-
-    Public Property Estado As Boolean
-        Get
-            Return _Estado
-        End Get
-        Set(value As Boolean)
-            _Estado = value
-        End Set
-    End Property
-
-    Public Property Clave As String
-        Get
-            Return _Clave
-        End Get
-        Set(value As String)
-            _Clave = value
-        End Set
-    End Property
-
-    Public Property Rol As String
-        Get
-            Return _Rol
-        End Get
-        Set(value As String)
-            _Rol = value
         End Set
     End Property
 End Class

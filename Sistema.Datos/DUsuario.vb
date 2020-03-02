@@ -35,7 +35,23 @@ Public Class DUsuario
             Throw ex
         End Try
     End Function
-
+    Public Function Login(email As String, clave As String) As DataTable
+        Try
+            Dim Resultado As SqlDataReader
+            Dim Tabla As New DataTable
+            Dim Comando As New SqlCommand("usuario_login", MyBase.conn)
+            Comando.CommandType = CommandType.StoredProcedure
+            Comando.Parameters.Add("@email", SqlDbType.VarChar).Value = email
+            Comando.Parameters.Add("@clave", SqlDbType.VarChar).Value = clave
+            MyBase.conn.Open()
+            Resultado = Comando.ExecuteReader()
+            Tabla.Load(Resultado)
+            MyBase.conn.Close()
+            Return Tabla
+        Catch ex As Exception
+            Throw ex
+        End Try
+    End Function
     Public Sub Insertar(Obj As Usuario)
         Try
             Dim Comando As New SqlCommand("usuario_insertar", MyBase.conn)
