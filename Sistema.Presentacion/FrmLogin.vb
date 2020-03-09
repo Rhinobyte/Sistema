@@ -20,6 +20,7 @@
                 Else
                     Me.Hide()
                     FrmPrincipal.IdUsuario = Obj.IdUsuario
+                    Variables.IdUsuario = Obj.IdUsuario
                     FrmPrincipal.IdRol = Obj.IdRol
                     FrmPrincipal.Rol = Obj.Rol
                     FrmPrincipal.Nombre = Obj.Nombre

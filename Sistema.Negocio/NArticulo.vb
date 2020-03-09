@@ -24,6 +24,28 @@ Public Class NArticulo
             Return Nothing
         End Try
     End Function
+    Public Function BuscarCodigo(valor As String) As Articulo
+        Try
+            Dim Datos As New DArticulo
+            Dim Tabla As New DataTable
+            Dim Art As New Articulo
+
+            Tabla = Datos.BuscarCodigo(valor)
+            If (Tabla.Rows.Count > 0) Then
+                Art.IdArticulo = Tabla.Rows(0).Item(0).ToString
+                Art.Codigo = Tabla.Rows(0).Item(1).ToString
+                Art.Nombre = Tabla.Rows(0).Item(2).ToString
+                Art.PrecioVenta = Tabla.Rows(0).Item(3).ToString
+                Art.Stock = Tabla.Rows(0).Item(4).ToString
+                Return Art
+            Else
+                Return Nothing
+            End If
+        Catch ex As Exception
+            MsgBox(ex.Message)
+            Return Nothing
+        End Try
+    End Function
 
     Public Function Insertar(Obj As Articulo) As Boolean
         Try

@@ -38,7 +38,7 @@ Partial Class FrmLogin
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(89, 101)
+        Me.Label1.Location = New System.Drawing.Point(88, 131)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(35, 13)
         Me.Label1.TabIndex = 0
@@ -47,7 +47,7 @@ Partial Class FrmLogin
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(89, 150)
+        Me.Label2.Location = New System.Drawing.Point(89, 173)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(34, 13)
         Me.Label2.TabIndex = 1
@@ -55,14 +55,14 @@ Partial Class FrmLogin
         '
         'TxtEmail
         '
-        Me.TxtEmail.Location = New System.Drawing.Point(171, 98)
+        Me.TxtEmail.Location = New System.Drawing.Point(171, 124)
         Me.TxtEmail.Name = "TxtEmail"
         Me.TxtEmail.Size = New System.Drawing.Size(218, 20)
         Me.TxtEmail.TabIndex = 2
         '
         'TxtClave
         '
-        Me.TxtClave.Location = New System.Drawing.Point(171, 147)
+        Me.TxtClave.Location = New System.Drawing.Point(171, 170)
         Me.TxtClave.Name = "TxtClave"
         Me.TxtClave.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.TxtClave.Size = New System.Drawing.Size(218, 20)
@@ -70,7 +70,7 @@ Partial Class FrmLogin
         '
         'BtnAcceder
         '
-        Me.BtnAcceder.Location = New System.Drawing.Point(137, 220)
+        Me.BtnAcceder.Location = New System.Drawing.Point(125, 245)
         Me.BtnAcceder.Name = "BtnAcceder"
         Me.BtnAcceder.Size = New System.Drawing.Size(103, 32)
         Me.BtnAcceder.TabIndex = 4
@@ -79,7 +79,7 @@ Partial Class FrmLogin
         '
         'BtnCancelar
         '
-        Me.BtnCancelar.Location = New System.Drawing.Point(285, 220)
+        Me.BtnCancelar.Location = New System.Drawing.Point(285, 245)
         Me.BtnCancelar.Name = "BtnCancelar"
         Me.BtnCancelar.Size = New System.Drawing.Size(104, 32)
         Me.BtnCancelar.TabIndex = 5
