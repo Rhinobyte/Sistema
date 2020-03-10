@@ -294,6 +294,8 @@
     <None Include="Resources\user.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\compra_m.png" />
+    <None Include="Resources\ventas_m.png" />
     <Content Include="SqlServerTypes\Loader.cs" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
