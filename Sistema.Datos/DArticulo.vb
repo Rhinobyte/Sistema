@@ -35,11 +35,44 @@ Public Class DArticulo
             Throw ex
         End Try
     End Function
+    Public Function BuscarVenta(valor As String) As DataTable
+        Try
+            Dim Resultado As SqlDataReader
+            Dim Tabla As New DataTable
+            Dim Comando As New SqlCommand("articulo_buscar_venta", MyBase.conn)
+            Comando.CommandType = CommandType.StoredProcedure
+            Comando.Parameters.Add("@valor", SqlDbType.VarChar).Value = valor
+            MyBase.conn.Open()
+            Resultado = Comando.ExecuteReader()
+            Tabla.Load(Resultado)
+            MyBase.conn.Close()
+            Return Tabla
+        Catch ex As Exception
+            Throw ex
+        End Try
+    End Function
     Public Function BuscarCodigo(valor As String) As DataTable
         Try
             Dim Resultado As SqlDataReader
             Dim Tabla As New DataTable
             Dim Comando As New SqlCommand("articulo_buscar_codigo", MyBase.conn)
+            Comando.CommandType = CommandType.StoredProcedure
+            Comando.Parameters.Add("@valor", SqlDbType.VarChar).Value = valor
+            MyBase.conn.Open()
+            Resultado = Comando.ExecuteReader()
+            Tabla.Load(Resultado)
+            MyBase.conn.Close()
+            Return Tabla
+        Catch ex As Exception
+            Throw ex
+        End Try
+    End Function
+
+    Public Function BuscarCodigoVenta(valor As String) As DataTable
+        Try
+            Dim Resultado As SqlDataReader
+            Dim Tabla As New DataTable
+            Dim Comando As New SqlCommand("articulo_buscar_codigo_venta", MyBase.conn)
             Comando.CommandType = CommandType.StoredProcedure
             Comando.Parameters.Add("@valor", SqlDbType.VarChar).Value = valor
             MyBase.conn.Open()
