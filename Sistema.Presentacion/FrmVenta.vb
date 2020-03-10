@@ -342,4 +342,160 @@
         End If
     End Sub
 
+    Private Sub BtnVerComprobante_Click(sender As Object, e As EventArgs) Handles BtnVerComprobante.Click
+        Try
+            Variables.IdVenta = DgvListado.SelectedCells.Item(1).Value
+            FrmReporteComprobanteVenta.ShowDialog()
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+    End Sub
+
+    Private Sub TabGeneral_SelectedIndexChanged(sender As Object, e As EventArgs) Handles TabGeneral.SelectedIndexChanged
+
+    End Sub
+
+    Private Sub TxtCodigo_TextChanged(sender As Object, e As EventArgs) Handles TxtCodigo.TextChanged
+
+    End Sub
+
+    Private Sub Label7_Click(sender As Object, e As EventArgs) Handles Label7.Click
+
+    End Sub
+
+    Private Sub TxtTotal_TextChanged(sender As Object, e As EventArgs) Handles TxtTotal.TextChanged
+
+    End Sub
+
+    Private Sub TxtTotalImpuesto_TextChanged(sender As Object, e As EventArgs) Handles TxtTotalImpuesto.TextChanged
+
+    End Sub
+
+    Private Sub TxtSubTotal_TextChanged(sender As Object, e As EventArgs) Handles TxtSubTotal.TextChanged
+
+    End Sub
+
+    Private Sub Label6_Click(sender As Object, e As EventArgs) Handles Label6.Click
+
+    End Sub
+
+    Private Sub Label4_Click(sender As Object, e As EventArgs) Handles Label4.Click
+
+    End Sub
+
+    Private Sub Label2_Click(sender As Object, e As EventArgs) Handles Label2.Click
+
+    End Sub
+
+    Private Sub DgvDetalle_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DgvDetalle.CellContentClick
+
+    End Sub
+
+    Private Sub TxtImpuesto_TextChanged(sender As Object, e As EventArgs) Handles TxtImpuesto.TextChanged
+
+    End Sub
+
+    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
+
+    End Sub
+
+    Private Sub TxtNumComprobante_TextChanged(sender As Object, e As EventArgs) Handles TxtNumComprobante.TextChanged
+
+    End Sub
+
+    Private Sub CboTipoComprobante_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CboTipoComprobante.SelectedIndexChanged
+
+    End Sub
+
+    Private Sub TxtNombreCliente_TextChanged(sender As Object, e As EventArgs) Handles TxtNombreCliente.TextChanged
+
+    End Sub
+
+    Private Sub TxtIdCliente_TextChanged(sender As Object, e As EventArgs) Handles TxtIdCliente.TextChanged
+
+    End Sub
+
+    Private Sub TxtId_TextChanged(sender As Object, e As EventArgs) Handles TxtId.TextChanged
+
+    End Sub
+
+    Private Sub LblTotalArticulos_Click(sender As Object, e As EventArgs) Handles LblTotalArticulos.Click
+
+    End Sub
+
+    Private Sub TabPage1_Click(sender As Object, e As EventArgs) Handles TabPage1.Click
+
+    End Sub
+
+    Private Sub PanelMostrar_Paint(sender As Object, e As PaintEventArgs) Handles PanelMostrar.Paint
+
+    End Sub
+
+    Private Sub LblTotalM_Click(sender As Object, e As EventArgs) Handles LblTotalM.Click
+
+    End Sub
+
+    Private Sub LblTotalImpuestoM_Click(sender As Object, e As EventArgs) Handles LblTotalImpuestoM.Click
+
+    End Sub
+
+    Private Sub LblSubTotalM_Click(sender As Object, e As EventArgs) Handles LblSubTotalM.Click
+
+    End Sub
+
+    Private Sub Label10_Click(sender As Object, e As EventArgs) Handles Label10.Click
+
+    End Sub
+
+    Private Sub Label9_Click(sender As Object, e As EventArgs) Handles Label9.Click
+
+    End Sub
+
+    Private Sub Label8_Click(sender As Object, e As EventArgs) Handles Label8.Click
+
+    End Sub
+
+    Private Sub DgvMostrarDetalle_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DgvMostrarDetalle.CellContentClick
+
+    End Sub
+
+    Private Sub TxtValor_TextChanged(sender As Object, e As EventArgs) Handles TxtValor.TextChanged
+
+    End Sub
+
+    Private Sub LblTotal_Click(sender As Object, e As EventArgs) Handles LblTotal.Click
+
+    End Sub
+
+    Private Sub TabPage2_Click(sender As Object, e As EventArgs) Handles TabPage2.Click
+
+    End Sub
+
+    Private Sub GroupBox2_Enter(sender As Object, e As EventArgs) Handles GroupBox2.Enter
+
+    End Sub
+
+    Private Sub PanelArticulos_Paint(sender As Object, e As PaintEventArgs) Handles PanelArticulos.Paint
+
+    End Sub
+
+    Private Sub DgvArticulos_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DgvArticulos.CellContentClick
+
+    End Sub
+
+    Private Sub TxtBuscarArticulos_TextChanged(sender As Object, e As EventArgs) Handles TxtBuscarArticulos.TextChanged
+
+    End Sub
+
+    Private Sub TxtSerieComprobante_TextChanged(sender As Object, e As EventArgs) Handles TxtSerieComprobante.TextChanged
+
+    End Sub
+
+    Private Sub Label5_Click(sender As Object, e As EventArgs) Handles Label5.Click
+
+    End Sub
+
+    Private Sub Label3_Click(sender As Object, e As EventArgs) Handles Label3.Click
+
+    End Sub
 End Class

@@ -56,6 +56,7 @@ Partial Class FrmArticulo
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.DgvListado = New System.Windows.Forms.DataGridView()
         Me.TabGeneral = New System.Windows.Forms.TabControl()
+        Me.BtnReporte = New System.Windows.Forms.Button()
         CType(Me.ErrorIcono, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage2.SuspendLayout()
         CType(Me.PicImagen, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -313,7 +314,7 @@ Partial Class FrmArticulo
         '
         Me.BtnBuscar.Location = New System.Drawing.Point(739, 21)
         Me.BtnBuscar.Name = "BtnBuscar"
-        Me.BtnBuscar.Size = New System.Drawing.Size(195, 20)
+        Me.BtnBuscar.Size = New System.Drawing.Size(87, 20)
         Me.BtnBuscar.TabIndex = 3
         Me.BtnBuscar.Text = "Buscar"
         Me.BtnBuscar.UseVisualStyleBackColor = True
@@ -336,6 +337,7 @@ Partial Class FrmArticulo
         '
         'TabPage1
         '
+        Me.TabPage1.Controls.Add(Me.BtnReporte)
         Me.TabPage1.Controls.Add(Me.BtnDesactivar)
         Me.TabPage1.Controls.Add(Me.BtnActivar)
         Me.TabPage1.Controls.Add(Me.BtnEliminar)
@@ -375,6 +377,15 @@ Partial Class FrmArticulo
         Me.TabGeneral.SelectedIndex = 0
         Me.TabGeneral.Size = New System.Drawing.Size(951, 522)
         Me.TabGeneral.TabIndex = 1
+        '
+        'BtnReporte
+        '
+        Me.BtnReporte.Location = New System.Drawing.Point(832, 21)
+        Me.BtnReporte.Name = "BtnReporte"
+        Me.BtnReporte.Size = New System.Drawing.Size(87, 20)
+        Me.BtnReporte.TabIndex = 8
+        Me.BtnReporte.Text = "Reporte"
+        Me.BtnReporte.UseVisualStyleBackColor = True
         '
         'FrmArticulo
         '
@@ -430,4 +441,5 @@ Partial Class FrmArticulo
     Friend WithEvents Label6 As Label
     Friend WithEvents TxtCodigo As TextBox
     Friend WithEvents Label5 As Label
+    Friend WithEvents BtnReporte As Button
 End Class

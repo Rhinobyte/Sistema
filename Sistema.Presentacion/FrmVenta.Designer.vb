@@ -74,6 +74,7 @@ Partial Class FrmVenta
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.ErrorIcono = New System.Windows.Forms.ErrorProvider(Me.components)
+        Me.BtnVerComprobante = New System.Windows.Forms.Button()
         CType(Me.DgvDetalle, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabGeneral.SuspendLayout()
         Me.TabPage1.SuspendLayout()
@@ -288,6 +289,7 @@ Partial Class FrmVenta
         '
         'TabPage1
         '
+        Me.TabPage1.Controls.Add(Me.BtnVerComprobante)
         Me.TabPage1.Controls.Add(Me.PanelMostrar)
         Me.TabPage1.Controls.Add(Me.BtnAnular)
         Me.TabPage1.Controls.Add(Me.ChkSeleccionar)
@@ -424,7 +426,7 @@ Partial Class FrmVenta
         '
         Me.BtnBuscar.Location = New System.Drawing.Point(739, 21)
         Me.BtnBuscar.Name = "BtnBuscar"
-        Me.BtnBuscar.Size = New System.Drawing.Size(195, 20)
+        Me.BtnBuscar.Size = New System.Drawing.Size(134, 20)
         Me.BtnBuscar.TabIndex = 3
         Me.BtnBuscar.Text = "Buscar"
         Me.BtnBuscar.UseVisualStyleBackColor = True
@@ -596,6 +598,15 @@ Partial Class FrmVenta
         '
         Me.ErrorIcono.ContainerControl = Me
         '
+        'BtnVerComprobante
+        '
+        Me.BtnVerComprobante.Location = New System.Drawing.Point(879, 20)
+        Me.BtnVerComprobante.Name = "BtnVerComprobante"
+        Me.BtnVerComprobante.Size = New System.Drawing.Size(134, 20)
+        Me.BtnVerComprobante.TabIndex = 9
+        Me.BtnVerComprobante.Text = "Comprobante"
+        Me.BtnVerComprobante.UseVisualStyleBackColor = True
+        '
         'FrmVenta
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -678,4 +689,5 @@ Partial Class FrmVenta
     Friend WithEvents Label5 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents ErrorIcono As ErrorProvider
+    Friend WithEvents BtnVerComprobante As Button
 End Class
